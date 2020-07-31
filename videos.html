@@ -14,38 +14,14 @@ title: Dr. Manuel Vallejo's Academic Website
       <td>Module #</td>
       <td>Name</td>
     </tr>
+    {% for video in site.data.videos %}
     <tr>
-    <td>Module 1 </td>
-    <td> <a onclick="configure_video('0B5wWlkDDTgHkMTVVMUpuZWlfSDg')" href="#">Labor Epidural Technique</a> </td>
-  </tr>
-  <tr>
-    <td>Module 2 </td>
-    <td> <a onclick="configure_video('0B5wWlkDDTgHkVExvaHFGVUJ0MGc')" href="#">Labor Epidural Positioning</a> </td>
-  </tr>
-  <tr>
-    <td>Module 3 </td>
-    <td> <a onclick="configure_video('0B5wWlkDDTgHkY2Q0TVg3ZG5Rb1U')" href="#">Labor Epidural Kit</a> </td>
-  </tr>
-  <tr>
-    <td>Module 4 </td>
-    <td> <a onclick="configure_video('0B5wWlkDDTgHkN1d6UkQ1cjFUc2c')" href="#">Labor Epidural Pump Programing</a> </td>
-  </tr>
-  <tr>
-    <td>Module 5 </td>
-    <td> <a onclick="configure_video('0B5wWlkDDTgHkeVJ3V0tISnlZWTA')" href="#">PCEA - Pump Configuration</a> </td>
-  </tr>
-  <tr>
-    <td>Module 6 </td>
-    <td> <a onclick="configure_video('0B5wWlkDDTgHkd2dzMkE0VTQzQUU')" href="#">Spinal Insertion</a> </td>
-  </tr>
-  <tr>
-    <td>Module 7 </td>
-    <td> <a onclick="configure_video('0B5wWlkDDTgHkZVBySzBKNTVBSDQ')" href="#">Infusion Pump Medications</a> </td>
-  </tr>
-  <tr>
-    <td>Module 8 </td>
-    <td> <a onclick="configure_video('0B5wWlkDDTgHkVnVIanczV1YxZHM')" href="#">Spinal Kit</a> </td>
-  </tr>
+      <td>{{ forloop.index }}</td>
+      <td> <a onclick="configure_presentation('{{ video.id }}')" href="#">{{ video.title }}</a> </td>
+    </tr>
+    {% endfor %}
+
+
 </table>
 </div>
 <script src="/assets/js/videos.js"></script>
