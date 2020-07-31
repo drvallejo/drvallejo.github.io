@@ -12,20 +12,14 @@ title: Dr. Manuel Vallejo's Academic Website
   <table class="table table-striped">
     <tr>
       <td>#</td>
-      <td>Name</td>
+      <td>Title</td>
     </tr>
+    {% for doc in site.data.documents %}
     <tr>
-      <td> 1 </td>
-      <td> <a href="/assets/documents/principles_of_obstetric_anesthesia.doc" target="_blank">Principals of Obstetric Anesthesia</a>
+      <td>{{ forloop.index }}</td>
+      <td> <a href="/assets/documents/{{ doc.filename }}" target="_blank"> {{ doc.title }} </a></td>
     </tr>
-    <tr>
-      <td> 2 </td>
-      <td> <a href="assets/documents/epidural_normogram.jpg" target="_blank">Epidural Normogram</a>
-    </tr>
-    <tr>
-      <td> 3 </td>
-      <td> <a href="assets/documents/epidural_depth_equation.xlsx" target="_blank">Epidural Depth Equation</a>
-    </tr>
+    {% endfor %}
   </table>
 
 </div>
