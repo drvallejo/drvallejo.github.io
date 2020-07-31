@@ -14,14 +14,13 @@ title: Dr. Manuel Vallejo's Academic Website
       <td>#</td>
       <td>Name</td>
     </tr>
-    <tr>
-      <td> 1 </td>
-      <td> <a onclick="configure_presentation('1cI6wX1e2wkyaVC_N_2MW_XrdBmYVLYiz1fCrF-0XBNY')" href="#">Dental Injuries</a> </td>
     </tr>
+    {% for pres in site.data.presentations %}
     <tr>
-      <td> 2 </td>
-      <td> <a onclick="configure_presentation('1wiPiqI9a-pGKZfefbruSs1jlTIJuoQv0vLrXCTZHVcE')" href="#">Transthoracic Echocardiography</a> </td>
+      <td>{{ forloop.index }}</td>
+      <td> <a onclick="configure_presentation('{{ pres.id }}')" href="#">{{ pres.title }}</a> </td>
     </tr>
+    {% endfor %}
   </table>
 </div>
 
