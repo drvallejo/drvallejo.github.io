@@ -17,7 +17,7 @@ title: Dr. Manuel Vallejo's Academic Website
     {% for video in site.data.videos %}
     <tr>
       <td>{{ forloop.index }}</td>
-      <td> <a onclick="configure_presentation('{{ video.id }}')" href="#">{{ video.title }}</a> </td>
+      <td> <a onclick="configure_video('{{ video.id }}')" href="#">{{ video.title }}</a> </td>
     </tr>
     {% endfor %}
 
